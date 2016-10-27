@@ -1,0 +1,10 @@
+* packages
+https://github.com/zweifisch/ob-http
+* desired functions
+In Emacs,
+
+Counts the number of characters in the line above point. Inserts that number of =s or -s for making headings.
+
+* tips
+** ag
+.agignore :: put in patterns you want ag to ignore when matching, incl in projects
