@@ -41,6 +41,7 @@ values."
      fasd
      slack
      semantic
+     typography
      helm
      pandoc
      restclient
