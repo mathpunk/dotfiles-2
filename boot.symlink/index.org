@@ -1,4 +1,5 @@
-Learning Boot
+* Learning Boot
+
 https://github.com/boot-clj/boot#build-from-the-command-line
 
 Also check out 
@@ -7,10 +8,9 @@ https://github.com/magomimmo/modern-cljs
 Running scripts, which you've been wanting to do for quite a while
 https://github.com/boot-clj/boot/wiki/Scripts
 
-Configuring:
-https://github.com/boot-clj/boot/wiki/Cider-REPL#a-better-way
 
-NOTE: This is not congruent with your dotfiles way of doing things, but i don't know how to get a DIR to be linked in symbolically. Will a dir called boot.symlink do it? Yeah probably? 
+* Boot with Cider Configuration
+https://github.com/boot-clj/boot/wiki/Cider-REPL#a-better-way
 
 #+BEGIN_SRC clojure :tangle profile.boot
 
@@ -30,40 +30,34 @@ NOTE: This is not congruent with your dotfiles way of doing things, but i don't 
 
 In Emacs do M-x customize-variable cider-boot-parameters and set it to cider repl -s wait. For project specific settings you can create a .dir-locals.el file with the following content:
 
+#+BEGIN_SRC elisp
 
 ((nil . ((cider-boot-parameters . "cider dev wait"))))
 
+#+END_SRC
+
+=cider= happens last, =wait= happens first (to watch the file system), arbitrary tasks happen in the middle.
 
 
-
+* Repls, Scripts, and One-Liners
 
 Boot supports an option for including dependencies from the command line. Just type boot -d clj-time repl to get a REPL with the latest clj-time as a dependency:
 
-1
-2
-3
-4
+#+BEGIN_SRC sh
+boot -d clj-time repl
+#+END_SRC
 
-	
-
-$ boot -d clj-time repl
-;;; output omitted
+#+BEGIN_SRC 
 boot.user=> (require '[clj-time.core :as t])
-;;; etc.
+#+END_SRC
 
 Note that Boot’s repl task also supports the --eval option (-e for short), so we can already put the require on the command line:
 
-1
-2
-3
-4
-5
+#+BEGIN_SRC sh
+boot -d clj-time repl -e "(require '[clj-time.core :as t]))"
+#+END_SRC
 
-	
-
-$ boot -d clj-time repl -e "(require '[clj-time.core :as t]))"
-Clojure 1.8.0
-;;; output omitted
+<
 boot.user=> (t/plus (l/local-now) (t/hours 30))
 #object[org.joda.time.DateTime 0x3489e3ab "2016-10-25T17:11:18.560+02:00"
 
