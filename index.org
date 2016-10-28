@@ -1,0 +1,14 @@
+
+
+
+++
+
+FUTURE
+======
+If my needs get more complex, consider: 
+
+https://github.com/pearl-core/pearl
+https://github.com/svetlyak40wt/dotfiler
+
+this is an entire application -- but, it handles security in a very serious-looking way 
+https://github.com/autonomy/alterant

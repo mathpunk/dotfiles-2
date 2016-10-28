@@ -19,4 +19,4 @@
 # exec "$EDITOR" "${1:-.}"
 #
 # And here's the non-general version that I could get working
-emacsclient -n -a '' ${1:-.}
+emacsclient -nw

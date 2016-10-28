@@ -1,0 +1,43 @@
+(defalias 'new-name 'old-name)
+
+LISP FOR TOM HENDERSON
+
+Since I'm too old to learn new things, I wll rename emacs-lisp names to clojure names at every chance I get. Then I will find-and-replace before publishing anything, to cover my shame. 
+
+This is a great idea. 
+
+
+
+* Facts about Emacs Lisp
+
+It uses "dynamic scope" (?).
+Function arguments are enclosed in parens instead of brackets.
+
+* Important Functions
+
+interactive 
+
+(alias 'defn 'defun)
+
+* Functions I need or want
+
+* Keybindings Are Key
+
+How does spacemacs assign keys?
+
+* Make Yr Own Layers
+
+* Atom: Another Contender
+  Atom has more packages that I understand, but it also doesn't have as good a community binding.
+  This could be made into my problem, if I want to help with Proton, but it seems like a lot of work.
+  
+* Packages to consider
+
+People like hippie-mode for autocomplete? But I think that I have an ok autocomplete in spacemacs.
+
+* Where To Learn
+http://ergoemacs.org/emacs/elisp.html
+http://www.virtuouscode.com/tag/emacs/?mode=list
+https://www.emacswiki.org/emacs/UnitTesting :: Idea: Write katas for emacs-lisp
+https://www.gnu.org/software/emacs/manual/eintr.html
+https://searchcode.com/file/7690576/emacs_tips.md

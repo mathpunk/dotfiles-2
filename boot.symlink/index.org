@@ -1,0 +1,29 @@
+Learning Boot
+https://github.com/boot-clj/boot#build-from-the-command-line
+
+Also check out 
+https://github.com/magomimmo/modern-cljs
+
+Running scripts, which you've been wanting to do for quite a while
+https://github.com/boot-clj/boot/wiki/Scripts
+
+Configuring:
+https://github.com/boot-clj/boot/wiki/Cider-REPL#a-better-way
+
+NOTE: This is not congruent with your dotfiles way of doing things, but i don't know how to get a DIR to be linked in symbolically. Will a dir called boot.symlink do it? Yeah probably? 
+
+#+BEGIN_SRC clojure :tangle profile.boot
+
+(deftask cider "CIDER profile"
+  []
+  (require 'boot.repl)
+  (swap! @(resolve 'boot.repl/*default-dependencies*)
+         concat '[[org.clojure/tools.nrepl "0.2.12"]
+                  [cider/cider-nrepl "0.10.0"]
+                  [refactor-nrepl "2.0.0-SNAPSHOT"]])
+  (swap! @(resolve 'boot.repl/*default-middleware*)
+         concat '[cider.nrepl/cider-middleware
+                  refactor-nrepl.middleware/wrap-refactor])
+  identity)
+
+#+END_SRC

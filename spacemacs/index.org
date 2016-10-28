@@ -1,5 +1,8 @@
+
 * packages
 https://github.com/zweifisch/ob-http
+
+
 * desired functions
 In Emacs,
 
@@ -8,3 +11,49 @@ Counts the number of characters in the line above point. Inserts that number of 
 * tips
 ** ag
 .agignore :: put in patterns you want ag to ignore when matching, incl in projects
+
+* INCORPORATE
+warts
+=====
+bump text size up and down
+
+
+packages
+========
+https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Btools/deft
+https://github.com/ivoarch/aurel
+
+configuration
+=============
+font -- in system
+
+#+BEGIN_QUOTE
+
+Font files that are placed in the hidden .fonts directory of your home folder will automatically be available.
+
+You can also double-click on the font file (or select Open with Font Viewer in the right-click menu). Then click the Install Font button.
+
+If you need the fonts to be available system-wide, you'll need to copy them to /usr/share/fonts and reboot (or manually rebuild the font cache with fc-cache -f -v).
+
+#+END_QUOTE
+
+Note: Something is super janky, because i had to set my editor's font size to like 35 to see stuff. 
+
+
+kata & tutorials
+==================
+https://github.com/ivoarch/learnxinyminutes-docs/blob/master/elisp.html.markdown
+
+
+org-mode reference
+==================
+https://github.com/ivoarch/refcard-org-mode
+
+
+inspiration
+===========
+http://howardism.org/Technical/Emacs/literate-devops.html
+http://tom.preston-werner.com/2010/08/23/readme-driven-development.html
+http://tom.preston-werner.com/2010/05/11/tomdoc-reasonable-ruby-documentation.html
+http://tomdoc.org/
+https://zachholman.com/posts/documentation/

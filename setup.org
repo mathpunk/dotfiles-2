@@ -20,8 +20,132 @@ night mode
    
 * Clone .dotfiles
 * Install programs
-sudo apt-get install emacs zsh firefox google-chrome
+
+Pacman?
+emacs 
+zsh 
+google-chrome
+slack
+java 8
+
+
+Shell scripts
+boot
+
+#+BEGIN_SRC sh
+
+sudo bash -c "cd /usr/local/bin && curl -fsSLo boot https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && chmod 755 boot"
+
+#+END_SRC
+
+
 
 * Install dotfiles
 ~/.dotfiles/script/bootstrap
+
+
+* INCORPORATE
+
+font
+====
+Set up font on Ubuntu
+PragmataPro in ...
+
+
+editor
+======
+dotfile
+emacs, emacsclient as default editor in shell
+
+
+browser
+=======
+firefox with VimFX seems nice
+chrome has nice devtools
+need tab management for both
+http://www.makeuseof.com/tag/speed-up-tab-handling-on-chrome-with-these-7-extensions/
+
+
+gaming partition
+================
+say, 5x5GB games
+Windows requirements 
+make sure to remove bloatware
+
+
+media service
+=============
+Plex on RPi3 ?
+Storage at home
+Storage on bucket
+Storage on togo
+
+
+hostname, username
+==================
+i like the idea of 'boundary' lately
+chiral is a nice username
+
+
+hostname for remotes
+====================
+computronia for cloud computation
+undecided for media.... simulacrum, baudrillard, barthes, text, rapgod, matrix, idk that's top of head
+
+
+terminal
+========
+
+zsh 
+---
+vim mode
+https://www.google.com/search?client=ubuntu&channel=fs&q=zsh+shell+github&ie=utf-8&oe=utf-8
+
+fish
+----
+vim mode
+https://github.com/oh-my-fish/oh-my-fish
+
+spacemacs
+---------
+set up whatever you need to to get the in-editor terminal working, OR set up a quake-style terminal
+
+gnome-terminal
+--------------
+readable
+hotkeys
+size
+stuff like that
+
+
+windows
+=======
+
+i3 
+--
+worth a shot!
+
+dash
+----
+real nerds use conky but, 
+i'm a hipster and would prefer tiny electrons or something html/js
+
+
+
+languages
+=========
+jvm
+node
+clojure (lein)
+clojurescript (boot, planck)
+tools/templates for shell scripting in clojurescript
+experiment with: purescript, typescript, idris, esolang
+
+
+media tools
+===========
+webtorrent 
+plex
+procured computronium
+
 
