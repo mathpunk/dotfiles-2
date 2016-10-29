@@ -30,7 +30,7 @@ https://github.com/boot-clj/boot/wiki/Cider-REPL#a-better-way
 
 In Emacs do M-x customize-variable cider-boot-parameters and set it to cider repl -s wait. For project specific settings you can create a .dir-locals.el file with the following content:
 
-#+BEGIN_SRC elisp
+#+BEGIN_SRC elisp :tangle ~/fire/projects/anansi/.dir-locals.el
 
 ((nil . ((cider-boot-parameters . "cider dev wait"))))
 
