@@ -1,3 +1,5 @@
+* Swapping Caps Lock & Escape
+
 From wiki.archlinux.org/index.php/Extra_keyboard_keys_in_console
 
 First, create a keymap file. This can be anywhere, but one method is to mimic the directory hierarchy in /usr/local.
@@ -23,9 +25,20 @@ In order to make use of the personal keymap, it must be loaded with =loadkeys=:
 
 #+BEGIN_SRC sh
 
-loadkeys /usr/local/share/kbd/keymaps/personal.map
+sudo loadkeys /usr/local/share/kbd/keymaps/personal.map
 
 #+END_SRC
 
-In order to load the keymap at boot, specify the full path to the file in the KEYMAP variable in /etc/vconsole.conf
+** Persistent Configuration 
 
+From wiki.archlinux.org/index.php/Keyboard_configuration_in_console#Persistent_configuration
+
+"In order to load the keymap at boot, specify the full path to the file in the KEYMAP variable in /etc/vconsole.conf"
+
+The problem with that is that currently the file has KEYMAP=us and I'm afraid to change it; we want our personal map to like, cascade from the us default. Ask on an Arch forum or something.
+
+
+
+* Automating the above
+idk but you should
+gnome-tweak-tool for doing it in wayland... automate?

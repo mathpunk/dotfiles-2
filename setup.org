@@ -27,6 +27,8 @@ zsh
 google-chrome
 slack
 java 8
+mongodb
+tmux
 
 
 Shell scripts
@@ -39,10 +41,8 @@ sudo bash -c "cd /usr/local/bin && curl -fsSLo boot https://github.com/boot-clj/
 #+END_SRC
 
 
-
 * Install dotfiles
 ~/.dotfiles/script/bootstrap
-
 
 * INCORPORATE
 

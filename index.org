@@ -13,3 +13,8 @@ https://github.com/svetlyak40wt/dotfiler
 
 this is an entire application -- but, it handles security in a very serious-looking way 
 https://github.com/autonomy/alterant
+
+* Make these changes persist
+
+~/.config/sway/config
+~/.config/i3status/config

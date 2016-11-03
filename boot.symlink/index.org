@@ -124,3 +124,7 @@ cljs.user=> (str (-> (t/plus (t/now) (t/hours 30)) (t/to-default-time-zone)))
 "20161025T220847"
 
         http://blog.michielborkent.nl/blog/2016/10/19/one-off-clojure-libraries/
+
+        
+And just in time, a blog post about this:   
+https://medium.com/@hlship/boot-9ff7deda78a5#.tmu6w6hac
