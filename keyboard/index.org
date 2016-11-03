@@ -1,0 +1,31 @@
+From wiki.archlinux.org/index.php/Extra_keyboard_keys_in_console
+
+First, create a keymap file. This can be anywhere, but one method is to mimic the directory hierarchy in /usr/local.
+
+#+BEGIN_SRC sh
+
+mkdir -p /usr/local/share/kbd/keymaps
+
+#+END_SRC
+
+touch /usr/local/share/kbd/keymaps/personal.map
+
+#+BEGIN_SRC sh :tangle /usr/local/share/kbd/keymaps/personal.map
+
+keycode 1 = Caps_Lock
+keycode 58 = Escape
+
+#+END_SRC
+
+Note: I can't do this right now b/c I'm missing the ability to sudo from emacs. Hmph. 
+
+In order to make use of the personal keymap, it must be loaded with =loadkeys=:
+
+#+BEGIN_SRC sh
+
+loadkeys /usr/local/share/kbd/keymaps/personal.map
+
+#+END_SRC
+
+In order to load the keymap at boot, specify the full path to the file in the KEYMAP variable in /etc/vconsole.conf
+
