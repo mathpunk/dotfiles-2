@@ -1,2 +1,2 @@
-boot/cache
+boot.symlink/cache
 git/gitconfig.local.symlink
