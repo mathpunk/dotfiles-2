@@ -57,7 +57,6 @@ editor
 dotfile
 emacs, emacsclient as default editor in shell
 
-
 browser
 =======
 firefox with VimFX seems nice
@@ -72,14 +71,12 @@ say, 5x5GB games
 Windows requirements 
 make sure to remove bloatware
 
-
 media service
 =============
 Plex on RPi3 ?
 Storage at home
 Storage on bucket
 Storage on togo
-
 
 hostname, username
 ==================
