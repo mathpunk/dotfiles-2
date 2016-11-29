@@ -1,0 +1,104 @@
+Colorize ls in hyper
+Better prompt
+Cursor in hyper is lousy
+
+
+
+#+TITLE: Editors (Spacemacs: main)
+
+For inspiration look at
+http://pages.sachachua.com/.emacs.d/Sacha.html#org332b2fd
+
+* Prose configuration
+** Learn to use Eric' journal function, and modify.
+** lisp for text processing
+So this has some points: https://sites.google.com/site/steveyegge2/the-emacs-problem
+
+
+#+BEGIN_QUOTE
+Of course we're not just talking about log data. The situation is even clearer for configuration files. You definitely want them in XML, except it has the same problems, so... Hey, wait a minute — if your configuration file is... Lisp, then it's not really a... configuration file anymore; it's part of your... program? Is that right?
+
+Um, yep. You got it.
+
+The whole nasty "configuration" problem becomes incredibly more convenient in the Lisp world. No more stanza files, apache-config, .properties files, XML configuration files, Makefiles — all those lame, crappy, half-language creatures that you wish were executable, or at least loaded directly into your program without specialized processing. I know, I know — everyone raves about the power of separating your code and your data. That's because they're using languages that simply can't do a good job of representing data as code. But it's what you really want, or all the creepy half-languages wouldn't all evolve towards being Turing-complete, would they?
+#+END_QUOTE
+
+* Code configuration
+** Trying: eslint
+
+In cli:
+#+BEGIN_SRC sh
+npm install -g eslint
+#+END_SRC
+
+In spacemacs:
+#+BEGIN_SRC emacs-lisp
+(add-hook 'js2-mode-hook
+          (defun my-js2-mode-setup ()
+            (flycheck-mode t)
+            (when (executable-find "eslint")
+              (flycheck-select-checker 'javascript-eslint))))
+#+END_SRC
+
+I get a filemode specification error. Looks like flycheck is missing. Try package install package?
+
+SPC h d p: Describe package
+
+
+++
+
+Here's more on installing that kind of thing... with babel? I think that's ES-Futuring...?
+http://codewinds.com/blog/2015-04-02-emacs-flycheck-eslint-jsx.html
+
+** TODO Set line numbers for code files
+
+* Writing functions in emacs lisp
+I started a [[file:~/tutorials/emacs-lisp.org][tutorial on learning emacs & spacemacs]]
+
+Here are links on the elisp language and philosophy
+https://github.com/chrisdone/elisp-guide
+http://steve-yegge.blogspot.com/2008/01/emergency-elisp.html
+https://sites.google.com/site/steveyegge2/the-emacs-problem
+https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org
+
+* DOING Configuration layers
+
+Managing private configuration layers, from the spacemacs docs
+https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org#managing-private-configuration-layers
+
+First, know that the ./private directory in .emacs.d is ignored by git. So that's good and bad --- layers are private, but not source-controlled.
+
+So, use an external git repo.
+
+Then realize you have no dotfile version control at all, and go to....
+
+
+* Metaconfiguration
+
+Some of this must be learned: you need to know how to look things up in the documentation quickly.
+Others can be functionalized.
+
+++
+
+Add an abbreviation
+
+Look up...
+- variable
+- function
+- package
+
+Set a variable
+
+Execute some emacs-lisp
+
+
+** apropos
+apropos-variable
+apropos-function
+* Context switching
+- temporary buffers
+- remember mode
+- todo.txt
+
+* Server configuration
+https://www.gnu.org/software/emacs/manual/html_node/emacs/Emacs-Server.html
