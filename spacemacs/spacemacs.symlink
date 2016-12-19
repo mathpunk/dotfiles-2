@@ -39,7 +39,7 @@ values."
 
      ;; Standard spacemacs
      ;; ------------------
-     ivy ;; compare with helm
+     helm
      better-defaults
      (auto-completion :variables
                       auto-completion-tab-key-behavior 'cycle
@@ -74,7 +74,7 @@ values."
      ;; -----
      markdown
      deft
-     ;; org
+     org
 
      ;; Tools & Interop
      ;; ---------------
@@ -343,8 +343,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
 
   ;; could this fix the org-links void problem?
-  ;; (use-package org-plus-contrib :ensure t :defer t)
-
+  ;(use-package org-eldoc :ensure t :defer t)
+  ;(use-package org-plus-contrib :ensure t :defer t)
   )
 
 (defun dotspacemacs/user-config ()
@@ -387,37 +387,34 @@ you should place your code here."
 
   ;; Org-Mode
   ;; --------
-  ;; Must be evaluated after load.
-  ;; (require 'ob-sh)
-  ;(with-eval-after-load 'org
-    ;;; (setq-default dotspacemacs-configuration-layers ;; Was this in error?
-    ;(setq org-edit-src-indentation 0
-          ;org-confirm-babel-evaluate nil
-          ;org-src-fontify-natively t
-          ;org-src-tab-acts-natively nil
-          ;org-babel-clojure-backend 'cider
-          ;org-support-shift-select 'always
-          ;org-hide-emphasis-markers nil
-          ;org-babel-clojure-nrepl-timeout nil
-          ;org-html-htmlize-output-type 'css)
+  (with-eval-after-load 'org
+    (use-package ob-sh)
+    (use-package org-eldoc)
+    (setq org-edit-src-indentation 0
+          org-confirm-babel-evaluate nil
+          org-src-fontify-natively t
+          org-src-tab-acts-natively nil
+          org-babel-clojure-backend 'cider
+          org-support-shift-select 'always
+          org-hide-emphasis-markers nil
+          org-babel-clojure-nrepl-timeout nil
+          org-html-htmlize-output-type 'css)
+    (org-babel-do-load-languages
+     'org-babel-load-languages
+     '((http       . t)
+       (shell      . t)
+       (clojure    . t)
+       (dot        . t)
+       (emacs-lisp . t)
+       ;; (js         . t)
+       ;; (python     . t)
+       )))
 
-    ;; (require 'cider)
     ;; Enable inline image when entering org-mode
     ; (defun turn-on-org-show-all-inline-images ()
       ; (org-display-inline-images t t))
     ; (add-hook 'org-mode-hook 'turn-on-org-show-all-inline-images)
 
-    ; (org-babel-do-load-languages
-     ; 'org-babel-load-languages
-     ; '((http       . t)
-       ; ;; (sh         . t)
-       ; (shell         . t)
-       ; (js         . t)
-       ; (emacs-lisp . t)
-       ; (clojure    . t)
-       ; (python     . t)
-       ; (dot        . t)
-       ; ))
     ; ;; Useful fns when using Clojure from Org -- find better keys
     ; (org-defkey org-mode-map "\C-x\C-e" 'cider-eval-last-sexp)
     ; (org-defkey org-mode-map "\C-c\C-d" 'cider-doc)
@@ -439,14 +436,15 @@ you should place your code here."
         ; (org-agenda-file-to-front)))
     ; (add-hook 'after-save-hook 'to-agenda-on-save-org-mode-file)
     ; )
+
   ;; Code Preferences
   ;; ================
   (add-hook 'prog-mode-hook 'spacemacs/toggle-auto-completion-on)
 
   ;; Clojure
   ;; (require 'cider) ;; in clojure layer, right?
-  (add-hook 'clojure-mode-hook #'eldoc-mode)
-  (setq cider-repl-display-help-banner nil)
+  ;; (add-hook 'clojure-mode-hook #'eldoc-mode)
+  ;; (setq cider-repl-display-help-banner nil)
 
   ;; sidecar nonsense I don't comprehend
   ;; (setq cider-cljs-lein-repl
@@ -492,7 +490,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (zonokai-theme zenburn-theme zen-and-art-theme xterm-color web-beautify underwater-theme ujelly-theme typo twilight-theme twilight-bright-theme twilight-anti-bright-theme tronesque-theme toxi-theme tao-theme tangotango-theme tango-plus-theme tango-2-theme sunny-day-theme sublime-themes subatomic256-theme subatomic-theme spacegray-theme sourcerer-theme soothe-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme smeargle shell-pop seti-theme reverse-theme railscasts-theme purple-haze-theme professional-theme planet-theme phoenix-dark-pink-theme phoenix-dark-mono-theme pastels-on-dark-theme orgit org organic-green-theme omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme ob-restclient ob-http noctilux-theme niflheim-theme naquadah-theme mwim mustang-theme multi-term monokai-theme monochrome-theme molokai-theme moe-theme mmm-mode minimal-theme material-theme markdown-toc markdown-mode majapahit-theme magit-gitflow magit-gh-pulls lush-theme livid-mode skewer-mode simple-httpd light-soap-theme json-mode json-snatcher json-reformat js2-refactor js2-mode js-doc jbeans-theme jazz-theme ir-black-theme inkpot-theme heroku-theme hemisu-theme hc-zenburn-theme gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme gitignore-mode github-search github-clone github-browse-file gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gist gh marshal logito pcache ht gh-md gandalf-theme flycheck-pos-tip flycheck flatui-theme flatland-theme firebelly-theme farmhouse-theme evil-magit magit magit-popup git-commit with-editor espresso-theme eshell-z eshell-prompt-extras esh-help dracula-theme django-theme deft darktooth-theme darkokai-theme darkmine-theme darkburn-theme dakrone-theme cyberpunk-theme company-tern dash-functional tern company-statistics company-restclient restclient know-your-http-well company-quickhelp pos-tip company-auctex company color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized coffee-mode clues-theme clojure-snippets clj-refactor inflections edn multiple-cursors paredit s peg cider-eval-sexp-fu eval-sexp-fu highlight cider seq spinner queue clojure-mode cherry-blossom-theme busybee-theme bubbleberry-theme birds-of-paradise-plus-theme badwolf-theme auto-yasnippet yasnippet auctex-latexmk auctex apropospriate-theme anti-zenburn-theme ample-zen-theme ample-theme alect-themes afternoon-theme ac-ispell auto-complete wgrep smex ivy-hydra counsel-projectile counsel swiper ivy which-key use-package spacemacs-theme quelpa pcre2el macrostep hydra help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag exec-path-from-shell evil-visualstar evil-escape elisp-slime-nav bind-map auto-compile ace-window ace-jump-helm-line))))
+    (org-eldoc restclient-helm helm-gitignore request helm-company helm-c-yasnippet org-plus-contrib org-projectile org-present org-pomodoro alert log4e gntp org-download htmlize gnuplot zonokai-theme zenburn-theme zen-and-art-theme xterm-color web-beautify underwater-theme ujelly-theme typo twilight-theme twilight-bright-theme twilight-anti-bright-theme tronesque-theme toxi-theme tao-theme tangotango-theme tango-plus-theme tango-2-theme sunny-day-theme sublime-themes subatomic256-theme subatomic-theme spacegray-theme sourcerer-theme soothe-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme smeargle shell-pop seti-theme reverse-theme railscasts-theme purple-haze-theme professional-theme planet-theme phoenix-dark-pink-theme phoenix-dark-mono-theme pastels-on-dark-theme orgit org organic-green-theme omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme ob-restclient ob-http noctilux-theme niflheim-theme naquadah-theme mwim mustang-theme multi-term monokai-theme monochrome-theme molokai-theme moe-theme mmm-mode minimal-theme material-theme markdown-toc markdown-mode majapahit-theme magit-gitflow magit-gh-pulls lush-theme livid-mode skewer-mode simple-httpd light-soap-theme json-mode json-snatcher json-reformat js2-refactor js2-mode js-doc jbeans-theme jazz-theme ir-black-theme inkpot-theme heroku-theme hemisu-theme hc-zenburn-theme gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme gitignore-mode github-search github-clone github-browse-file gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gist gh marshal logito pcache ht gh-md gandalf-theme flycheck-pos-tip flycheck flatui-theme flatland-theme firebelly-theme farmhouse-theme evil-magit magit magit-popup git-commit with-editor espresso-theme eshell-z eshell-prompt-extras esh-help dracula-theme django-theme deft darktooth-theme darkokai-theme darkmine-theme darkburn-theme dakrone-theme cyberpunk-theme company-tern dash-functional tern company-statistics company-restclient restclient know-your-http-well company-quickhelp pos-tip company-auctex company color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized coffee-mode clues-theme clojure-snippets clj-refactor inflections edn multiple-cursors paredit s peg cider-eval-sexp-fu eval-sexp-fu highlight cider seq spinner queue clojure-mode cherry-blossom-theme busybee-theme bubbleberry-theme birds-of-paradise-plus-theme badwolf-theme auto-yasnippet yasnippet auctex-latexmk auctex apropospriate-theme anti-zenburn-theme ample-zen-theme ample-theme alect-themes afternoon-theme ac-ispell auto-complete wgrep smex ivy-hydra counsel-projectile counsel swiper ivy which-key use-package spacemacs-theme quelpa pcre2el macrostep hydra help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag exec-path-from-shell evil-visualstar evil-escape elisp-slime-nav bind-map auto-compile ace-window ace-jump-helm-line))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
