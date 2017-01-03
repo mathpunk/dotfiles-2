@@ -1,8 +1,0 @@
-http://reasoniamhere.com/2014/01/11/outrageously-useful-tips-to-master-your-z-shell/
-https://github.com/unixorn/awesome-zsh-plugins
-https://github.com/zsh-users/antigen
-
-http://geoff.greer.fm/lscolors/
-https://github.com/unixorn/warhol.plugin.zsh
-https://github.com/zsh-users/zsh-syntax-highlighting
-http://naxoc.net/2014/02/02/syntax-highlighting-commands-with-zsh/

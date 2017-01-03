@@ -1,0 +1,541 @@
+This approach to dotfiling is based on uh, idk some guy's dotfiles. He worked at Github once? 
+
+Anyway he wrote some scripts that let you suffix files with .symlink and they get symlinked into your home directory.
+
+My next innovation (<2016-12-20 Tue>) will be to try and change the grouping of things a bit, so that they are named by general purpose rather than by specific name of application. That's the excuse anyway; the purpose is to try and clean up a bunch of crazy noise that I made while trying to set up this Arch box. If I clean it up right, I can reinstall Arch with good encryption and lose very little time re-configuring.
+
+* bin 
+  Like scripts 'n shit. 
+
+* browser
+
+Customizations of cVim for Chrome.
+https://github.com/1995eaton/chromium-vim
+
+* drawing
+The fantasy is to be able to Bluetooth my Bamboo into a dir that I'm typing into, instead of having to pass it through my mobile and then an intermediary server. But I've not got the 'tooth skills to do that at this time.
+
+* editor
+Currently Spacemacs. In the future, Atom, if the community for Proton steps up.
+
+ Emacs for life (for now -- I just read about the horrors of what it's emulating)
+
+ Then clone Spacemacs
+
+ Then use yr own dotfiles
+
+** emacs
+ unalias emacs - it's currently emacsclient and fucked up
+
+ Current workaround for emacs:
+
+ Launch emacs. It freezes. 
+ Launch emacs a second time. It also freezes.
+ ps -ef |grep emacs
+ kill both processes
+ one process will die; the other will ask a prompt -- hit q
+ Use emacs.
+
+* keyboard
+
+I've added this line to my i3/config:
+
+#+BEGIN_SRC 
+
+exec setxkbmap -layout us -option caps:escape
+
+#+END_SRC
+
+Another solution can be found in Xmodmap, but it doesn't seem to run correctly?
+
+* languages
+Language specific config.
+
+Clojure.
+Javascript.
+
+* mobiles
+  My mobile is not well-integrated into my system. I'm referring to my phone, but also my reader is not well-integrated and it'd be nice to have a service for sending PDFs to it.
+* mouse
+Fix yr mouse! I wanna do graphics.
+
+* multiplexer
+tmux
+* os
+Currently, Arch Linux. 
+
+WANTED:
+Script that auto updates my system regularly.
+Script that gets a list of installed packages regularly.
+Script for installing the packages for a new system.
+
+* passwords
+* repl 
+Clojure
+Node
+IPython. Wait should this be languages
+* script
+Has a few things to bootstrap this. It's annoying to have to guess every time, write something about what they are. 
+* shell
+* signin
+* terminal
+* windows
+
+
+** i3
+ remove follow focus on mouse, i tihnk, or a way to turn it off. it's something i both use and get irritated by. 
+
+** screen lock
+ set up easy screen locking
+
+* SYNTHESIZE
+
+** Terminal
+
+ XTerm is unreadable, and I cannot find the non-X way to configure it. I'm going super hipster and building Hyper.app, let's see how that goes. 
+
+ Ok I did it. Uh. Let's see. The bin is currently in 
+
+ ~/fire/os/hyper/dist/linux-unpacked/Hyper
+
+ So I guess link it to bin? 
+
+
+ #+BEGIN_SRC sh
+
+ ln -s ~/fire/os/hyper/dist/linux-unpacked/Hyper ~/.dotfiles/bin/Hyper
+
+ #+END_SRC
+
+*** .inputrc / zsh vi mode
+
+    Not sure I caught all the places. 
+
+** NEXT
+
+** Things I installed along the way
+
+ rlwrap
+ mongodb
+
+ i3-style --- a node way of doing config for your i3
+
+ I installed all this, it could be very up my alley if I do end up going this super i3 road. 
+ http://joaquinlp.me/blog/your-guide-to-a-damn-light-arch-linux-with-i3-and-text-apps/
+
+
+ TABS UP:
+ https://graphicallinearalgebra.net/2015/05/16/natural-numbers-diagrammatically/
+ https://wiki.archlinux.org/index.php/i3
+ http://i3wm.org/docs/userguide.html#configuring
+ http://joaquinlp.me/blog/tag/i3/
+ http://joaquinlp.me/blog/how-to-automate-your-movies-and-tv-shows-downloads-on-arch-linux/
+ http://joaquinlp.me/blog/cmus-data-i3bar-i3status/
+ https://github.com/ranger/ranger/wiki
+ https://wiki.archlinux.org/index.php/feh#As_a_desktop_wallpaper_manager
+ https://wiki.archlinux.org/index.php/GTK+
+ https://wiki.archlinux.org/index.php/Infinality#Installation
+ https://wiki.archlinux.org/index.php/Infinality
+ https://wiki.archlinux.org/index.php/Wireless_network_configuration#Automatic_setup
+ https://wiki.archlinux.org/index.php/i3
+
+** Helpful? 
+ https://wiki.archlinux.org/index.php/x_resources
+** features desired
+ Emacs literate programming in Clojure
+
+** learning
+ Use DOT more:
+
+ digraph {
+   soloist -> "musical performer";
+   "musical performer" -> musician;
+   musician -> artist;
+   artist -> person;
+   person -> human;
+   author -> artist;
+   "scifi writer" -> author;
+   journalist -> author;
+   correspondent -> journalist;
+ }
+
+
+ #+BEGIN_QUOTE
+
+ There are a few key bindings quite handy to work with the structure of the document. We often endup writing big Org file with a lot of headers and level of headers. It is quite handy to be able to focus on specific regions in a Org outline. This can easily be done using C-x n s which will focus on a particular region (only the content of that region appears in the buffer). Then you can use C-x n w to unfocus a focused region (everything surrounding that region will reappear in the buffer).
+
+ There are tens of other key bindings that you will endup using in Org-mode for doing Literate Programming, but these are the ones I most often use when writing a Org file.
+
+ http://fgiasson.com/blog/index.php/2016/06/21/optimal-emacs-settings-for-org-mode-for-literate-programming/
+
+ #+END_QUOTE
+
+** preferences
+ Colorize ls in hyper
+ Better prompt
+ Cursor in hyper is lousy
+
+
+
+ #+TITLE: Editors (Spacemacs: main)
+
+ For inspiration look at
+ http://pages.sachachua.com/.emacs.d/Sacha.html#org332b2fd
+
+** Prose configuration
+*** Learn to use Eric' journal function, and modify.
+*** lisp for text processing
+ So this has some points: https://sites.google.com/site/steveyegge2/the-emacs-problem
+
+
+ #+BEGIN_QUOTE
+ Of course we're not just talking about log data. The situation is even clearer for configuration files. You definitely want them in XML, except it has the same problems, so... Hey, wait a minute — if your configuration file is... Lisp, then it's not really a... configuration file anymore; it's part of your... program? Is that right?
+
+ Um, yep. You got it.
+
+ The whole nasty "configuration" problem becomes incredibly more convenient in the Lisp world. No more stanza files, apache-config, .properties files, XML configuration files, Makefiles — all those lame, crappy, half-language creatures that you wish were executable, or at least loaded directly into your program without specialized processing. I know, I know — everyone raves about the power of separating your code and your data. That's because they're using languages that simply can't do a good job of representing data as code. But it's what you really want, or all the creepy half-languages wouldn't all evolve towards being Turing-complete, would they?
+ #+END_QUOTE
+
+** Code configuration
+*** Trying: eslint
+
+ In cli:
+ #+BEGIN_SRC sh
+ npm install -g eslint
+ #+END_SRC
+
+ In spacemacs:
+ #+BEGIN_SRC emacs-lisp
+ (add-hook 'js2-mode-hook
+           (defun my-js2-mode-setup ()
+             (flycheck-mode t)
+             (when (executable-find "eslint")
+               (flycheck-select-checker 'javascript-eslint))))
+ #+END_SRC
+
+ I get a filemode specification error. Looks like flycheck is missing. Try package install package?
+
+ SPC h d p: Describe package
+
+
+ ++
+
+ Here's more on installing that kind of thing... with babel? I think that's ES-Futuring...?
+ http://codewinds.com/blog/2015-04-02-emacs-flycheck-eslint-jsx.html
+
+*** TODO Set line numbers for code files
+
+** Writing functions in emacs lisp
+ I started a [[file:~/tutorials/emacs-lisp.org][tutorial on learning emacs & spacemacs]]
+
+ Here are links on the elisp language and philosophy
+ https://github.com/chrisdone/elisp-guide
+ http://steve-yegge.blogspot.com/2008/01/emergency-elisp.html
+ https://sites.google.com/site/steveyegge2/the-emacs-problem
+ https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org
+
+** DOING Configuration layers
+
+ Managing private configuration layers, from the spacemacs docs
+ https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org#managing-private-configuration-layers
+
+ First, know that the ./private directory in .emacs.d is ignored by git. So that's good and bad --- layers are private, but not source-controlled.
+
+ So, use an external git repo.
+
+ Then realize you have no dotfile version control at all, and go to....
+
+** Metaconfiguration
+
+ Some of this must be learned: you need to know how to look things up in the documentation quickly.
+ Others can be functionalized.
+
+ ++
+
+ Add an abbreviation
+
+ Look up...
+ - variable
+ - function
+ - package
+
+ Set a variable
+
+ Execute some emacs-lisp
+
+
+*** apropos
+ apropos-variable
+ apropos-function
+** Context switching
+ - temporary buffers
+ - remember mode
+ - todo.txt
+
+** Server configuration
+ https://www.gnu.org/software/emacs/manual/html_node/emacs/Emacs-Server.html
+
+
+ This is the top-level view of my settings. 
+
+** Current
+  
+ #+BEGIN_SRC sh
+
+ tree -L .
+
+ #+END_SRC
+
+** Desired
+** Manual
+*** Swap caps lock and escape
+
+  From a terminal, run
+
+  sudo apt-get install gnome-tweak-tool -y && gnome-tweak-tool
+
+  You can find an option to swap Caps Lock and Esc in "Typing -> Caps Lock key behavior".
+
+*** Modify browser 
+    idk whether to use chrome or firefox
+
+ extensions:
+ firefox: vimFX 
+ chrome: cVim
+
+ copy and paste
+ pinboard or your homebrew replacement
+ night mode
+   
+** Clone .dotfiles
+** Install programs
+
+ Pacman?
+ emacs 
+ zsh 
+ google-chrome
+ slack
+ java 8
+ mongodb
+ tmux
+
+
+ Shell scripts
+ boot
+
+ #+BEGIN_SRC sh
+
+ sudo bash -c "cd /usr/local/bin && curl -fsSLo boot https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && chmod 755 boot"
+
+ #+END_SRC
+
+** Install dotfiles
+ ~/.dotfiles/script/bootstrap
+
+** INCORPORATE
+
+ font
+ ====
+ Set up font on Ubuntu
+ PragmataPro in ...
+
+
+ editor
+ ======
+ dotfile
+ emacs, emacsclient as default editor in shell
+
+ browser
+ =======
+ firefox with VimFX seems nice
+ chrome has nice devtools
+ need tab management for both
+ http://www.makeuseof.com/tag/speed-up-tab-handling-on-chrome-with-these-7-extensions/
+
+
+ gaming partition
+ ================
+ say, 5x5GB games
+ Windows requirements 
+ make sure to remove bloatware
+
+ media service
+ =============
+ Plex on RPi3 ?
+ Storage at home
+ Storage on bucket
+ Storage on togo
+
+ hostname, username
+ ==================
+ i like the idea of 'boundary' lately
+ chiral is a nice username
+
+
+ hostname for remotes
+ ====================
+ computronia for cloud computation
+ undecided for media.... simulacrum, baudrillard, barthes, text, rapgod, matrix, idk that's top of head
+
+
+ terminal
+ ========
+
+ zsh 
+ ---
+ vim mode
+ https://www.google.com/search?client=ubuntu&channel=fs&q=zsh+shell+github&ie=utf-8&oe=utf-8
+
+ fish
+ ----
+ vim mode
+ https://github.com/oh-my-fish/oh-my-fish
+
+ spacemacs
+ ---------
+ set up whatever you need to to get the in-editor terminal working, OR set up a quake-style terminal
+
+ gnome-terminal
+ --------------
+ readable
+ hotkeys
+ size
+ stuff like that
+
+
+ windows
+ =======
+
+ i3 
+ --
+ worth a shot!
+
+ dash
+ ----
+ real nerds use conky but, 
+ i'm a hipster and would prefer tiny electrons or something html/js
+
+
+
+ languages
+ =========
+ jvm
+ node
+ clojure (lein)
+ clojurescript (boot, planck)
+ tools/templates for shell scripting in clojurescript
+ experiment with: purescript, typescript, idris, esolang
+
+
+ media tools
+ ===========
+ webtorrent 
+ plex
+ procured computronium
+
+** terps and turcks
+ You can screencast with wayland.
+ https://wiki.archlinux.org/index.php/wayland#Screencast_recording
+
+** themes
+ https://www.reddit.com/r/unixporn/
+** other
+
+**** [x] Launch gdm on boot
+  Ah! It looks like, you do =systemctl start ...= to start but it's =systemctl enable ...= to get it to launch on boot. 
+
+  https://wiki.archlinux.org/index.php/Systemd#Using_units
+
+  #+BEGIN_SRC sh
+
+  systemctl enable gdm.service
+
+  #+END_SRC
+**** CLINIC [ ] Enable Network Manager
+  https://wiki.archlinux.org/index.php/NetworkManager#Enable_NetworkManager
+
+  I tried =systemctl start NetworkManager= but no go --- it woke up the GUI, but clicking on the network didn't do anything
+
+  Workaround: ./begin (it's got the wifi-menu command)
+
+**** CLINIC [ ] Font, HiDPI
+  https://wiki.archlinux.org/index.php/wayland#High_DPI_displays
+  https://wiki.archlinux.org/index.php/fonts
+
+  I failed at "Install pragmata font", idk where it really goes
+  Bump font sizes up a little on Chrome
+
+**** [x] Configure Hyper in a dotfiles way
+  Check. Moved .hyper.js to .dotfiles/hyper/hyper.js.symlink
+
+  Also, you'll want a way to watch your current build for if you want to hax0r it (which I do believe you do!)
+
+**** AUR helper
+  I don't waaaaanna build packages
+
+  https://wiki.archlinux.org/index.php/AUR_helpers
+  https://wiki.archlinux.org/index.php/Arch_User_Repository
+  https://wiki.archlinux.org/index.php/Arch_User_Repository#FAQ
+  https://wiki.archlinux.org/index.php/Makepkg
+  and when you have the AUR helper, 
+  https://aur.archlinux.org/packages/fasd/
+  as well as, put in the thing that lets you do GNOME extensions easily? maybe?
+  https://aur.archlinux.org/packages/chrome-gnome-shell-git/
+
+**** GNOME Switcher
+  maybe?
+  https://github.com/daniellandau/switcher
+
+
+  https://wiki.archlinux.org/index.php/GNOME#Extensions
+
+**** Set tap to click in uh, Wayland or GNOME I'm not sure which 
+**** idk, this stuff
+**** Browser stuff
+
+  sync with phone? ugh i have the ambiguities with google
+  https://www.google.com/intl/en/chrome/browser/welcome.html
+
+  learn about these mappings, make a cVim config
+  chrome-extension://ihlenndgcmojhcghmfjfneahoeklbjjh/pages/mappings.html
+
+  https://extensions.gnome.org/
+  chrome://extensions/
+  https://chrome.google.com/webstore/search/copy%20url?hl=en-US&_category=extensions
+
+**** emacsdaemon
+
+  emacs --daemon should be running
+
+  e should emacsclient a file, or else current dir
+
+  I think that e should probably return control? maybe not, we want qz to return to the terminal
+
+**** lein / boot
+  boot is from aur
+  lein is a shell script in .dotfiles/bin
+**** connect bluetooth devices
+  https://wiki.archlinux.org/index.php/Bluetooth
+
+  Mouse
+  Phone
+  Bamboo?
+**** npm permissions
+  https://docs.npmjs.com/getting-started/fixing-npm-permissions#option-2-change-npms-default-directory-to-another-directory
+
+  #+BEGIN_SRC sh
+
+  mkdir ~/.npm-global
+
+  #+END_SRC
+
+  ...I set it up manually, b/c sourcing blocks in org mode ain't working for a few days, there was an update. Fix this up later. 
+
+**** Try i3
+  I failed at Sway. But I'm so into the idea of a tiling manager. So try i3 and the x server.
+**** Harden of the installation process
+
+  Goal is to have as much of it up in these dotfiles as possible --- ./script/bootstrap and GO
+
+  You can get pacman to generate installed packages. Is that the smart way? 
+  https://bbs.archlinux.org/viewtopic.php?id=56601
