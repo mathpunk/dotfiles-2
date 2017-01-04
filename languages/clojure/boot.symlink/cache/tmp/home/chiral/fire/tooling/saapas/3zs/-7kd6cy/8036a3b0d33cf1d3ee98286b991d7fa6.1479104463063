@@ -1,0 +1,1 @@
+{:require [frontend.core adzerk.boot-reload.init3303], :compiler-options {:asset-path "js/main.out", :parallel-build true, :preloads [devtools.preload], :external-config #:devtools{:config {:features-to-install [:formatters :hints :async]}}}}

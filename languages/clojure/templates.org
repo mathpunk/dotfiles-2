@@ -1,0 +1,4 @@
+TODO
+https://github.com/bhauman/lein-figwheel/wiki/Configuration-Options
+
+Set some configuration options in your devcards fork. (Make a devcards fork.) I.e., make a devcards that assumes you will fullstack some serverside, and that you will want to open files in your editor. 

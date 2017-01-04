@@ -1,0 +1,32 @@
+(ns anansi.reading.display)
+
+;; Welcome
+(declare greeting)
+(defn welcome-pane []
+  [:div#welcome [:h2 "Good morning--"]])
+
+;; Noting the time
+:morning :afternoon :evening :day :date
+
+;; The bad news
+(declare pins-remaining)
+[progress-bar (str (count (:posts @db)) " pins to review")]
+
+;; The word news
+(declare top-ten-tags made-up-words)
+
+;; Your morning's suggestion
+(declare most-recent-pins most-recurrent-pins lets-guess)
+
+;; Tag visualization
+(declare set-geometry!)
+(geometry :tags :lozenges)
+(geometry :pins :circles)
+(action :on-hover #(append % [:.transparent-card-pin]))
+
+(defn pre-sliced [db]
+  "Getting from one data slice view to another.")
+
+(defn reading-panel [db]
+  [:div#app "read it suckers"
+    [:div#visualization "Billions and billions of words"]])

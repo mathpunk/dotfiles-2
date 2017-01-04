@@ -1,0 +1,1 @@
+{:require [anansi.reading.app adzerk.boot-cljs-repl], :init-fns [anansi.reading.app/render], :compiler-options {:asset-path "js/app.out", :preloads [devtools.preload dirac.runtime.preload]}}

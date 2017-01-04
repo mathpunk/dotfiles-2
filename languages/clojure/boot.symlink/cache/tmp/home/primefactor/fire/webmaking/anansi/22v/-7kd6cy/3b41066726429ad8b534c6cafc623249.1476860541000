@@ -1,0 +1,30 @@
+(ns anansi.reading.app
+  (:require [reagent.core :as reagent :refer [atom]]
+            [anansi.reading.display :refer [reading-panel]]
+            [ajax.core :refer [GET POST]]
+            [clojure.walk :refer [keywordize-keys]]
+            [datascript.core :as d]))
+
+(enable-console-print!)
+
+(declare render)
+
+(def schema
+     { :pin/time {:db/cardinality :db.cardinality/one}
+       :pin/href {:db/cardinality :db.cardinality/one}
+       :pin/tags {:db/cardinality :db.cardinality/many} })
+
+(defonce conn
+  (do (println "Creating connection")
+      (d/create-conn schema)))
+
+(defn render
+  ([] (render @conn))
+  ([db] (reagent/render-component [reading-panel db]
+                            (.getElementById js/document "container"))))
+
+(d/listen! conn :render
+  (fn [tx-report] (render (:db-after tx-report))))
+
+(d/listen! conn :log
+  (fn [tx-report] (println (:tx-data tx-report))))

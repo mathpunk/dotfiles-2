@@ -1,0 +1,10 @@
+This is supposed to end up in .lein/profiles.clj. 
+
+This makes templates from skeleton projects. 
+
+#+BEGIN_SRC clojure :tangle ~/.lein/profiles.clj
+
+{:user {:plugins [[lein-create-template "0.2.0"]]}}
+
+#+END_SRC
+

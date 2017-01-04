@@ -1,0 +1,185 @@
+# see http://i3wm.org/docs/userguide.html for a complete reference
+
+
+# Settings
+# ========
+# set mod key to Alt
+set $mod Mod1
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+font pango:monospace 16
+
+# This font is widely installed, provides lots of unicode glyphs, right-to-left
+# text rendering and scalability on retina/hidpi displays (thanks to pango).
+#font pango:DejaVu Sans Mono 8
+
+
+# Windows & Workspaces
+# ====================
+
+# change focused window
+bindsym $mod+j focus left
+bindsym $mod+k focus right
+bindsym $mod+u focus up
+bindsym $mod+n focus down
+
+# change focused workspace
+bindsym $mod+m workspace 1 
+bindsym $mod+comma workspace 2 
+bindsym $mod+period workspace 3 
+bindsym $mod+slash workspace 4 
+bindsym $mod+5 workspace 5 
+bindsym $mod+6 workspace 6 
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move right
+bindsym $mod+Shift+n move down
+bindsym $mod+Shift+u move up
+
+# move focused container to workspace N
+bindsym $mod+1 move container to workspace 1 
+bindsym $mod+2 move container to workspace 2 
+bindsym $mod+3 move container to workspace 3 
+bindsym $mod+4 move container to workspace 4 
+#bindsym $mod+5 move container to workspace 5 
+#bindsym $mod+6 move container to workspace 6 
+
+# focus next/previous workspace
+bindsym $mod+Tab focus right
+bindsym $mod+Shift+Tab focus left
+bindsym $mod+Return workspace back_and_forth
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# back-and-forth workspaces
+workspace_auto_back_and_forth yes
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# focus the parent container: "out"
+bindsym $mod+o focus parent
+
+# focus the child container: "in"
+bindsym $mod+i focus child
+
+# Layout
+# ======
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split, floating))
+bindsym $mod+Shift+w layout stacking
+bindsym $mod+Shift+t layout tabbed
+bindsym $mod+Shift+s layout toggle split
+bindsym $mod+Shift+f floating toggle
+
+# change focus between tiling / floating windows
+# bindsym $mod+space focus mode_toggle
+
+# split in horizontal (|) or vertical (-) orientation
+bindsym $mod+backslash split h
+bindsym $mod+minus split v
+
+
+# Resizing Mode
+# =============
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize grow width 10 px or 10 ppt
+        bindsym k resize shrink width 10 px or 10 ppt
+        bindsym u resize grow height 10 px or 10 ppt
+        bindsym n resize shrink height 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize grow width 10 px or 10 ppt
+        bindsym Right resize shrink width 10 px or 10 ppt
+        bindsym Up resize grow height 10 px or 10 ppt
+        bindsym Down resize shrink height 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+Shift+r mode "resize"
+
+
+# Launchers
+# =========
+# start a web browser, editor, terminal
+bindsym $mod+e exec emacs # or appropriate emacsclient variant?
+bindsym $mod+r exec /home/chiral/code/os-projects/hyper/dist/linux-unpacked/hyper
+bindsym $mod+w exec chromium
+
+# start something else
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+# Meta (needs work)
+# =================
+# edit the configuration file
+bindsym $mod+Shift+e exec emacsclient ~/.config/i3/config
+# reload the configuration file
+bindsym $mod+Shift+r reload
+# exit i3 (logs you out of your X session)
+bindsym $mod+x exec "i3-nagbar -t warning -m 'End x session and exit i3?' -b 'Yes, exit i3' 'i3-msg exit'"
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+x restart
+
+
+# Bars & Status
+# =============
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+  status_command i3status
+  colors {
+    separator #dc322f
+    background #002b36
+    statusline #268bd2
+    focused_workspace #fdf6e3 #859900 #fdf6e3
+    active_workspace #fdf6e3 #6c71c4 #fdf6e3
+    inactive_workspace #586e75 #93a1a1 #002b36
+    urgent_workspace #d33682 #d33682 #fdf6e3
+  }
+}
+
+client.focused #859900 #859900 #fdf6e3 #859900
+client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
+client.unfocused #073642 #073642 #93a1a1 #586e75
+client.urgent #d33682 #d33682 #fdf6e3 #dc322f
+
+# mouse warping is a little interesting but also annoying
+# this doesn't cancel like I'd think
+mouse_warping none
+
+# startup applications
+# exec emacs --daemon # i wish but idk how to client right
+exec setxkbmap -layout us -option caps:escape
+
+# pop up behavior in fullscreen
+# popups_during_fullscreen smart
+
+# Top keys with icons -- doesn't work? Check with sound
+bindsym XF86AudioMute exec amixer -q set Master mute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute
+# XF86AudioMicMute
+# XF86MonBrightnessDown
+# XF86MonBrightnessUp
+# XF86Display
+# XF86WLAN
+# XF86Tools
+# XF86Search
+# XF86LaunchA
+# XF86Explorer

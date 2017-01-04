@@ -1,0 +1,11 @@
+candidates
+==========
+http://zanshin.net/2013/09/05/my-tmux-configuration/
+https://github.com/tony/tmux-config
+https://gist.github.com/snuggs/800936
+http://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/
+https://github.com/thoughtbot/dotfiles/blob/master/tmux.conf
+
+
+shortcuts
+https://gist.github.com/MohamedAlaa/2961058

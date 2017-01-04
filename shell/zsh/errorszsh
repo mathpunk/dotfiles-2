@@ -1,0 +1,174 @@
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/ant/ant.plugin.zsh:16: command not found: compdef
+-------- AUTOENV ---------
+Could not locate autoenv installation.
+Please check if autoenv is correctly installed.
+In the meantime the autoenv plugin is DISABLED.
+--------------------------
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/bower/bower.plugin.zsh:82: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/bwana/bwana.plugin.zsh:5: command not found: system_profiler
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/cabal/cabal.plugin.zsh:53: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/cake/cake.plugin.zsh:33: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/cakephp3/cakephp3.plugin.zsh:32: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/cakephp3/cakephp3.plugin.zsh:33: command not found: compdef
+zsh cask plugin: cask command not found
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/chruby/chruby.plugin.zsh:99: command not found: compdef
+[oh-my-zsh] chucknorris depends on strfile, which is not installed
+[oh-my-zsh] strfile is often provided as part of the 'fortune' package
+/home/chiral/.dotfiles/plugins/colemak/colemak-less: No such file or directory
+usage: lesskey [-o output] [input]
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/composer/composer.plugin.zsh:34: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/composer/composer.plugin.zsh:35: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/cp/cp.plugin.zsh:4: command not found: compdef
+apt_pref_compdef:12: command not found: compdef
+apt_pref_compdef:12: command not found: compdef
+apt_pref_compdef:12: command not found: compdef
+apt_pref_compdef:12: command not found: compdef
+apt_pref_compdef:12: command not found: compdef
+apt_pref_compdef:12: command not found: compdef
+apt_pref_compdef:12: command not found: compdef
+apt_pref_compdef:12: command not found: compdef
+apt_pref_compdef:12: command not found: compdef
+apt_pref_compdef:12: command not found: compdef
+apt_pref_compdef:12: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/django/django.plugin.zsh:398: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/django/django.plugin.zsh:399: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/django/django.plugin.zsh:400: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/django/django.plugin.zsh:401: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/django/django.plugin.zsh:402: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/emoji/emoji-char-definitions.zsh:17: character not in range
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/emoji/emoji-char-definitions.zsh:17: character not in range
+(anon):33: character not in range
+fastfile_sync:1: no matches found: /home/chiral/.fastfile//*
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/fossil/fossil.plugin.zsh:85: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/git-remote-branch/git-remote-branch.plugin.zsh:19: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/git/git.plugin.zsh:79: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/git/git.plugin.zsh:92: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/git/git.plugin.zsh:99: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/git/git.plugin.zsh:108: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/git/git.plugin.zsh:118: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/git/git.plugin.zsh:128: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/git/git.plugin.zsh:137: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/git/git.plugin.zsh:143: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/git/git.plugin.zsh:146: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/git/git.plugin.zsh:149: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/git/git.plugin.zsh:152: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/git/git.plugin.zsh:162: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/git/git.plugin.zsh:165: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/git/git.plugin.zsh:167: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/git/git.plugin.zsh:181: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/git/git.plugin.zsh:192: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/gitfast/../git/git.plugin.zsh:79: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/gitfast/../git/git.plugin.zsh:92: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/gitfast/../git/git.plugin.zsh:99: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/gitfast/../git/git.plugin.zsh:108: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/gitfast/../git/git.plugin.zsh:118: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/gitfast/../git/git.plugin.zsh:128: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/gitfast/../git/git.plugin.zsh:137: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/gitfast/../git/git.plugin.zsh:143: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/gitfast/../git/git.plugin.zsh:146: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/gitfast/../git/git.plugin.zsh:149: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/gitfast/../git/git.plugin.zsh:152: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/gitfast/../git/git.plugin.zsh:162: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/gitfast/../git/git.plugin.zsh:165: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/gitfast/../git/git.plugin.zsh:167: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/gitfast/../git/git.plugin.zsh:181: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/gitfast/../git/git.plugin.zsh:192: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/gitignore/gitignore.plugin.zsh:12: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/go/go.plugin.zsh:180: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/golang/golang.plugin.zsh:180: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/gradle/gradle.plugin.zsh:120: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/gradle/gradle.plugin.zsh:121: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/grails/grails.plugin.zsh:60: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/grunt/grunt.plugin.zsh:255: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/gulp/gulp.plugin.zsh:29: command not found: compdef
+mktemp: too few X's in template 'omz-update-histsubstrsrch'
+fatal: could not create work tree dir '/zsh-history-substring-search': Permission denied
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/history-substring-search/update-from-upstream.zsh:cd:47: no such file or directory: /zsh-history-substring-search
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/history-substring-search/update-from-upstream.zsh:cd:48: no such file or directory: /zsh-history-substring-search
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/history-substring-search/update-from-upstream.zsh:56: no matches found: /zsh-history-substring-search/*
+mv: cannot stat 'zsh-history-substring-search.zsh': No such file or directory
+mv: cannot stat 'zsh-history-substring-search.plugin.zsh': No such file or directory
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/httpie/httpie.plugin.zsh:33: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/jake-node/jake-node.plugin.zsh:14: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/knife_ssh/knife_ssh.plugin.zsh:18: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/laravel4/laravel4.plugin.zsh:12: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/laravel4/laravel4.plugin.zsh:13: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/laravel5/laravel5.plugin.zsh:12: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/laravel5/laravel5.plugin.zsh:13: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/lein/lein.plugin.zsh:43: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/mix-fast/mix-fast.plugin.zsh:28: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/mosh/mosh.plugin.zsh:2: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/n98-magerun/n98-magerun.plugin.zsh:25: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/n98-magerun/n98-magerun.plugin.zsh:26: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/npm/npm.plugin.zsh:5: permission denied: /npm_completion
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/osx/osx.plugin.zsh:178: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/paver/paver.plugin.zsh:16: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/phing/phing.plugin.zsh:7: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/pj/pj.plugin.zsh:37: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/pylint/pylint.plugin.zsh:3: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/rails/rails.plugin.zsh:24: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/rails/rails.plugin.zsh:27: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/rake-fast/rake-fast.plugin.zsh:35: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/repo/repo.plugin.zsh:3: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/repo/repo.plugin.zsh:6: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/repo/repo.plugin.zsh:9: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/repo/repo.plugin.zsh:12: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/repo/repo.plugin.zsh:15: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/repo/repo.plugin.zsh:18: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/rvm/rvm.plugin.zsh:20: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/rvm/rvm.plugin.zsh:31: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/rvm/rvm.plugin.zsh:42: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/rvm/rvm.plugin.zsh:53: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/rvm/rvm.plugin.zsh:74: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/sfffe/sfffe.plugin.zsh:[:9: too many arguments
+_start_agent:7: command not found: ssh-agent
+_start_agent:7: no such file or directory: /home/chiral/.ssh/environment-
+chmod: cannot access '/home/chiral/.ssh/environment-': No such file or directory
+_start_agent:.:9: no such file or directory: /home/chiral/.ssh/environment-
+_start_agent:15: command not found: ssh-add
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/stack/stack.plugin.zsh:37: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/symfony/symfony.plugin.zsh:13: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/symfony2/symfony2.plugin.zsh:15: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/symfony2/symfony2.plugin.zsh:16: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/symfony2/symfony2.plugin.zsh:17: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/symfony2/symfony2.plugin.zsh:18: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/taskwarrior/taskwarrior.plugin.zsh:7: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/ubuntu/ubuntu.plugin.zsh:11: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/ubuntu/ubuntu.plugin.zsh:14: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/ubuntu/ubuntu.plugin.zsh:18: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/ubuntu/ubuntu.plugin.zsh:21: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/ubuntu/ubuntu.plugin.zsh:25: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/ubuntu/ubuntu.plugin.zsh:28: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/ubuntu/ubuntu.plugin.zsh:44: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/ubuntu/ubuntu.plugin.zsh:45: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/ubuntu/ubuntu.plugin.zsh:46: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/ubuntu/ubuntu.plugin.zsh:47: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/ubuntu/ubuntu.plugin.zsh:48: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/ubuntu/ubuntu.plugin.zsh:49: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/ubuntu/ubuntu.plugin.zsh:50: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/ubuntu/ubuntu.plugin.zsh:51: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/ubuntu/ubuntu.plugin.zsh:52: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/ubuntu/ubuntu.plugin.zsh:53: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/ubuntu/ubuntu.plugin.zsh:54: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/ubuntu/ubuntu.plugin.zsh:55: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/ubuntu/ubuntu.plugin.zsh:56: command not found: compdef
+[oh-my-zsh] virtualenvwrapper plugin: Cannot find virtualenvwrapper.sh.
+ Please install with `pip install virtualenvwrapper`
+complete:13: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/yii/yii.plugin.zsh:13: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/yii/yii.plugin.zsh:14: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/yii2/yii2.plugin.zsh:29: command not found: compdef
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/zsh-navigation-tools/znt-tmux.zsh:19: command not found: tmux
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/zsh-navigation-tools/znt-tmux.zsh:27: command not found: tmux
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/zsh-navigation-tools/znt-tmux.zsh:28: command not found: tmux
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/zsh-navigation-tools/znt-tmux.zsh:29: command not found: tmux
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/zsh-navigation-tools/znt-tmux.zsh:30: command not found: tmux
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/zsh-navigation-tools/znt-tmux.zsh:33: command not found: tmux
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/zsh-navigation-tools/znt-tmux.zsh:36: command not found: tmux
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/zsh-navigation-tools/znt-tmux.zsh:37: command not found: tmux
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/zsh-navigation-tools/znt-tmux.zsh:38: command not found: tmux
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/zsh-navigation-tools/znt-tmux.zsh:39: command not found: tmux
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/zsh-navigation-tools/znt-tmux.zsh:42: command not found: tmux
+/home/chiral/.dotfiles/zsh/oh-my-zsh/plugins/zsh-navigation-tools/znt-tmux.zsh:50: command not found: tmux
+fossil_prompt_info:4: command not found: fossil
+zle-line-init:2: command not found: git_custom_status

@@ -1,0 +1,33 @@
+exit
+(use 'bidi.bidi)
+(def route ["/index.html" :index])
+(match-route route "/index.html")
+(match-route route "/hithere.html")
+(path-for route :index)
+(use 'bidi.bidi)
+(def route ["/index.html" :index])
+(path-for route :index)
+(def routes ["/" {"index.html" :index "article.html" :article}])
+
+(use 'bidi.bidi)
+(def route ["/" :index])
+(match-route route "/")
+(path-for route :index)
+(def my-routes ["/" {"index.html" :home-page "about.html" :bio}])
+(path-for my-routes :home-page)
+(match-route my-routes "/about.html")
+(def my-routes ["/" {"index.html" :index
+"articles/" {"index.html" :article-index
+[:id "article.html"] :article}}])
+(match-route my-routes "/articles/12341234/article.html")
+(def my-routes ["/" {"index.html" :index
+                        "articles/" {"index.html" :article-index
+                                     [:id "/article.html"] :article}}])
+(match-route my-routes "/articles/123/article.html")
+(def match (partial match-routes my-routes))
+(def match (partial match-route my-routes))
+(match "/index.html")
+(match "/articles/index.html")
+(match "/articles/1337/article.html")
+(path-for my-routes :article :id 123)
+

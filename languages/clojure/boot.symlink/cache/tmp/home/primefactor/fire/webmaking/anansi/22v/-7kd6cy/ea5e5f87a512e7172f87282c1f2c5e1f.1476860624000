@@ -1,0 +1,32 @@
+;; AJAX & Loading
+(defn edn-handler [res]
+  (edn/read-string res))
+
+(defn error-handler [{:keys [status status-text]}]
+  (println (str "Error while fetching: " status " " status-text)))
+
+(defn insert-entity [ent]
+  (d/transact! conn [ent]))
+
+(defn fetch-recent [handler]
+  (let [url "/pins/recent"]
+    (GET url {:handler handler :error-handler error-handler})))
+
+(defn insert-many [ents]
+  (doseq [e ents]
+    (insert-entity e)))
+
+(defn posts []
+  (:posts (fetch-recent edn-handler)))
+
+(defn recent-posts [] (fetch-recent (comp :posts edn-handler)))
+
+(defn do-to-recent-posts [f]
+  "the same thing but with a f in the composition in the right place"
+   (fetch-recent (comp f :posts edn-handler)))
+
+(do-to-recent-posts #(doseq [p %] (-> p pin->entity insert-entity)))
+
+(defn pin->entity [p]
+   {:pin/href (:href p)
+    :pin/tags (:tags p) } )

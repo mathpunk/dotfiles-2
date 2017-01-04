@@ -1,0 +1,5 @@
+[user]
+        name = mathpunk
+        email = tom@mathpunk.net
+[credential]
+        helper = cache

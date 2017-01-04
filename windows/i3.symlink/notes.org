@@ -1,0 +1,47 @@
+http://i3wm.org/docs/user-contributed/lzap-config.html
+
+
+# pulse audio volume control
+bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume 0 -- '-5%'
+bindsym XF86AudioRaiseVolume exec /usr/bin/pactl set-sink-volume 0 -- '+5%'
+bindsym XF86AudioMute exec /usr/bin/pactl set-sink-volume 0 0
+bindsym XF86Launch1 exec /usr/bin/pactl play-sample that_was_easy
+bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 5
+
+
+# workspace assignment (use "xprop")
+assign [class="^Google-chrome$"] 3
+assign [class="^URxvt$" instance="^mail$"] 4
+assign [class="^Xchat$"] 5
+assign [class="^Rednotebook$"] 6
+assign [class="^Decibel-audio-player.py$"] 7
+assign [title="Lingea Lexicon 5$"] 8
+
+# custom window settings
+for_window [class="^URxvt$" instance="scratchpad"] border 1pixel; move scratchpad
+for_window [class="^Google-chrome$"] border none
+for_window [title="Lingea Lexicon 5$"] border none
+
+# get elluminate working
+for_window [title="^Elluminate Live!"] floating enable
+for_window [title="^Application Sharing"] floating enable
+for_window [class="^net-sourceforge-jnlp-runtime-Boot$" title="^Downloading"] floating enable
+In this block, I force some applications to start on specific screens. You can see apps that I use everyday. IRC chat, notebook, audio player, dictionary, browser and that’s it.
+
+Than if I start a terminal with the name of “scratchpad” it changes its border to 1pixel and moves to the background – scratchpad, remember? This is cool.
+
+And I need to use Elluminate application for desktop sharing and meetings. It’s a Java application that does not look nice in the tiled mode, therefore I force it into floating mode. Good news is it is working actually, if you use it with Sun JRE. There are not many window managers Elluminate is working in, seriously.
+
+# before autostart
+exec --no-startup-id pactl upload-sample ~/.i3/that_was_easy.wav that_was_easy
+exec urxvt -name scratchpad -e bash
+exec ~/.i3/autostart
+
+# autostart
+exec google-chrome
+exec urxvt -name mail -e bash -c "mutt"
+exec xchat
+exec rednotebook
+exec decibel-audio-player
+exec lexicon
