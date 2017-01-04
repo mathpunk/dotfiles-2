@@ -1,0 +1,1 @@
+cd ~/projects/recur && lein figwheel devcards & cd -
