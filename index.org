@@ -2,8 +2,6 @@ This approach to dotfiling is based on uh, idk some guy's dotfiles. He worked at
 
 Anyway he wrote some scripts that let you suffix files with .symlink and they get symlinked into your home directory.
 
-My next innovation (<2016-12-20 Tue>) will be to try and change the grouping of things a bit, so that they are named by general purpose rather than by specific name of application. That's the excuse anyway; the purpose is to try and clean up a bunch of crazy noise that I made while trying to set up this Arch box. If I clean it up right, I can reinstall Arch with good encryption and lose very little time re-configuring.
-
 * bin 
   Like scripts 'n shit. 
 
@@ -89,7 +87,6 @@ Another solution can be found in Xmodmap, but it doesn't seem to run correctly? 
 
 
 
-
 * languages
 Language specific config.
 
@@ -99,10 +96,10 @@ Javascript.
 * mobiles
   My mobile is not well-integrated into my system. I'm referring to my phone, but also my reader is not well-integrated and it'd be nice to have a service for sending PDFs to it.
 * mouse
-Fix yr mouse! I wanna do graphics.
+** TODO Set up Bluetooth Mouse
 
 * multiplexer
-tmux
+  tmux. I think I found the same config file that I cloned long ago when I was always multiplexing. 
 * os
 Currently, Arch Linux. 
 
@@ -110,8 +107,15 @@ WANTED:
 Script that auto updates my system regularly.
 Script that gets a list of installed packages regularly.
 Script for installing the packages for a new system.
+Function that unlocks pacman on the rare occasions it locks up. 
 
 * passwords
+I have no strategy here. 
+
+** TODO Develop a password strategy
+There's LastPass.
+But you could also store passwords locally. And maybe do both? 
+
 * repl 
 Clojure
 Node
@@ -122,10 +126,12 @@ Has a few things to bootstrap this. It's annoying to have to guess every time, w
 * signin
 * terminal
 * windows
-
-
 ** i3
- remove follow focus on mouse, i tihnk, or a way to turn it off. it's something i both use and get irritated by. 
+   i3 is a tiling window manager. I mostly like it.
+
+*** TODO Experiment with turning off mouse focus following
+
+I tried, but the obvious thing in my config didn't work. I might just want to toggle it, or I may want to shut it off entirely
 
 ** screen lock
  set up easy screen locking
